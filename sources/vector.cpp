@@ -22,7 +22,7 @@ vector_t & vector_t::operator =(vector_t const & other)
 {
 	if ( this!= &other){
 		if (elemets_!=nullptr){
-			delete [] elements_l;
+			delete [] elements_;
 		}
 		elements_=new int[other.capacity];
 		for (int i=0; i<other.size_;i++)
@@ -69,7 +69,7 @@ void vector_t::push_back(int value)
 	if (capacity_=0){
 		capacity_=1;
 		size_=1;
-		elements_=new int [capacity];
+		elements_=new int [capacity_];
 		elements_[size-1]=value;
 	}
 	else 
