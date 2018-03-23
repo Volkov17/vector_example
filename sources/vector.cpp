@@ -13,7 +13,7 @@ vector_t::vector_t(vector_t const & other)
 
 vector_t & vector_t::operator =(vector_t const & other)
 {
-	return *this;
+	return *this;// hi
 }
 
 bool vector_t::operator ==(vector_t const & other) const
