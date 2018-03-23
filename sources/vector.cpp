@@ -66,28 +66,28 @@ std::size_t vector_t::capacity() const
 
 void vector_t::push_back(int value)
 {
-	if (capacity_=0){
+	if (capacity_==0){
 		capacity_=1;
 		size_=1;
 		elements_=new int [capacity_];
-		elements_[size-1]=value;
+		elements_[size_-1]=value;
 	}
 	else 
 	{
 		if (capacity_=size_){
 		capacity_ = 2 * capacity_;
- 		data_ = new int [capacity_];
+ 		elements = new int [capacity_];
  		for (int i = 0;i < size_;i++ )
  		{
- 			this->data_[i]=copy.data_[i]
+ 			this->elements[i]=copy.data_[i]
 		}
 		size_++;		
- 		data_[size_ - 1] = value;
+ 		elements[size_ - 1] = value;
  	}
  	else
  	{
  		size_++;
- 		data_[size_ - 1] = value;
+ 		elements[size_ - 1] = value;
  	}
 }
 
