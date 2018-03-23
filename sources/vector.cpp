@@ -23,10 +23,10 @@ vector_t::vector_t(vector_t const & other)
 vector_t & vector_t::operator =(vector_t const & other)
 {
 	if ( this!= &other){
-		if (elemets_!=nullptr){
+		if (elements_!=nullptr){
 			delete [] elements_;
 		}
-		elements_=new int[other.capacity];
+		elements_=new int[other.capacity_];
 		for (int i=0; i<other.size_;i++)
 			elements_[i] = other.elements_[i];
 		size_ = other.size_;
@@ -76,20 +76,20 @@ void vector_t::push_back(int value)
 	}
 	else 
 	{
-		if (capacity_=size_){
+		if (capacity_==size_){
 		capacity_ = 2 * capacity_;
- 		elements = new int [capacity_];
+ 		elements_ = new int [capacity_];
  		for (int i = 0;i < size_;i++ )
  		{
- 			this->elements[i]=copy.data_[i]
+ 			this->elements_[i]=copy.data_[i];
 		}
 		size_++;		
- 		elements[size_ - 1] = value;
+ 		elements_[size_ - 1] = value;
  	}
  	else
  	{
  		size_++;
- 		elements[size_ - 1] = value;
+ 		elements_[size_ - 1] = value;
  	}
 }
 
