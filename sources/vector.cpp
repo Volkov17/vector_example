@@ -77,7 +77,7 @@ void vector_t::push_back(int value)
  		elements_ = new int [capacity_];
  		for (int i = 0;i < size_;i++ )
  		{
- 			this->elements_[i]=copy.data_[i];
+ 			this->elements_[i]=copy.elements_[i];
 		}
 		size_++;		
  		elements_[size_ - 1] = value;
