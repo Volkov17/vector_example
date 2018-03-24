@@ -81,12 +81,13 @@ void vector_t::push_back(int value)
 		}
 		size_++;		
  		elements_[size_ - 1] = value;
- 	}
- 	else
- 	{
+		}
+		else
+		{
  		size_++;
  		elements_[size_ - 1] = value;
- 	}
+		}
+	}
 }
 
 void vector_t::pop_back()
